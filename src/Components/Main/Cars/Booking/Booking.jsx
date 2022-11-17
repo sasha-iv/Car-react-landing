@@ -8,14 +8,6 @@ import iconRoad from '../../../../images/icons/road.png';
 import iconLoc from '../../../../images/icons/location.png';
 
 const Booking = (props) => {
-    console.log(props)
-
-    const [input, setValue] = useState({
-        value:''
-    });
-    function handleChange(e) {
-        setValue({value: e.target.value});
-    }
 
     const [alreadyBooked, setAlreadyBooked] = useState(false);
     const toggleDisplay = () => setAlreadyBooked(value => !value);
@@ -73,8 +65,8 @@ const Booking = (props) => {
                     <form className='bookingDetail'>
                         <h3>Booking Detail</h3>
                         <form>
-                            <input type='date' value={input.value} onChange={handleChange}/>
-                            <input type='time' value={input.value} onChange={handleChange}/>
+                            <input type='date'/>
+                            <input type='time'/>
                             <div className='people'>
                                 <label>Time:</label>
                                 <select>
@@ -105,7 +97,6 @@ const Booking = (props) => {
                     ? <div className='payment'>
                         <div className='carBookedMessage'>
                             <h4>Your car is booked</h4>
-                            {/*<button className='btnStyle' onClick={toggleDisplay}>Reserve now</button>*/}
                         </div>
                       </div>
 

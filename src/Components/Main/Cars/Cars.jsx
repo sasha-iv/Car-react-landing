@@ -51,7 +51,6 @@ const Cars = (props) => {
             </div>
         </div>
     )
-
 }
 
 export default Cars;

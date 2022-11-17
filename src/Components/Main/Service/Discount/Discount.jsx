@@ -27,6 +27,7 @@ const DiscountBlock = (props) => {
 }
 
 const Discount = () => {
+
     const [displayForm, setDisplayForm] = useState(false);
     const toggleDisplay = () => setDisplayForm(value => !value);
 

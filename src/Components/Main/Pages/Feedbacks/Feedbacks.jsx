@@ -16,7 +16,6 @@ const Feedbacks = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        // centerMode: true,
         responsive: [
             {
                 breakpoint: 1150,
