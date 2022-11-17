@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/Car-react-landing/static/css/main.412a01d6.css",
+    "main.js": "/Car-react-landing/static/js/main.30bd9d15.js",
+    "static/media/car4.jpeg": "/Car-react-landing/static/media/car4.bc02238284274d680d69.jpeg",
+    "static/media/team-6.jpg": "/Car-react-landing/static/media/team-6.7c1cf31806ea74477d16.jpg",
+    "static/media/team-5.jpg": "/Car-react-landing/static/media/team-5.98edd982e8cfd618e42f.jpg",
+    "static/media/carousel-2.jpg": "/Car-react-landing/static/media/carousel-2.afb2854d30027bdd103b.jpg",
+    "static/media/carousel-1.jpg": "/Car-react-landing/static/media/carousel-1.53577861d88ab5a0fa35.jpg",
+    "static/media/team-3.jpg": "/Car-react-landing/static/media/team-3.cd9d18f5c5e847d97196.jpg",
+    "static/media/team-2.jpg": "/Car-react-landing/static/media/team-2.1859620f2d15ca4da6f8.jpg",
+    "static/media/about.png": "/Car-react-landing/static/media/about.7ba1ccdb8dc88e7c67c3.png",
+    "static/media/car-rent-5.png": "/Car-react-landing/static/media/car-rent-5.4e8226be901b83e4d4e6.png",
+    "static/media/car-rent-2.png": "/Car-react-landing/static/media/car-rent-2.7f1ac57a699f6aceed8e.png",
+    "static/media/car-rent-1.png": "/Car-react-landing/static/media/car-rent-1.d2cc62dadbe774725650.png",
+    "static/media/car-rent-3.png": "/Car-react-landing/static/media/car-rent-3.3ac195db022f991a87a4.png",
+    "static/media/car-rent-4.png": "/Car-react-landing/static/media/car-rent-4.b62e8857cf00b8f56717.png",
+    "static/media/star.png": "/Car-react-landing/static/media/star.f888d9dc2e81d9ab657d.png",
+    "static/media/6.jpg": "/Car-react-landing/static/media/6.049210db85aa9a77bf48.jpg",
+    "static/media/car-rent-6.png": "/Car-react-landing/static/media/car-rent-6.6ec84a3f20f47bea9092.png",
+    "static/media/team-4.jpg": "/Car-react-landing/static/media/team-4.9c36babb275884a7c801.jpg",
+    "static/media/team-1.jpg": "/Car-react-landing/static/media/team-1.1295389316e1535dd9ca.jpg",
+    "static/media/road.png": "/Car-react-landing/static/media/road.179a51f83d987f92ca97.png",
+    "static/media/arrow.png": "/Car-react-landing/static/media/arrow.2e1200fd38a3cdecc855.png",
+    "static/media/location.png": "/Car-react-landing/static/media/location.64af410c6a5f32b5fd4f.png",
+    "static/media/settings-gears.png": "/Car-react-landing/static/media/settings-gears.590a80d1b09adec6df39.png",
+    "static/media/2.jpg": "/Car-react-landing/static/media/2.df879d4ed301440fc746.jpg",
+    "static/media/slick.svg": "/Car-react-landing/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Car-react-landing/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Car-react-landing/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Car-react-landing/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Car-react-landing/index.html",
+    "main.412a01d6.css.map": "/Car-react-landing/static/css/main.412a01d6.css.map",
+    "main.30bd9d15.js.map": "/Car-react-landing/static/js/main.30bd9d15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.412a01d6.css",
+    "static/js/main.30bd9d15.js"
+  ]
+}
