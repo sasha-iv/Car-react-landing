@@ -1,0 +1,39 @@
+@import '../../../mixins';
+@import "../../../App";
+
+.contactsWrapper{
+  width: 80%;
+  min-height: 500px;
+  margin: $size * 5 auto;
+  padding: 0 $size * 2 $size * 2 $size * 2;
+  h1{
+    color: $colorDarkBlue;
+    margin: $size * 5 0;
+    padding-top: $size * 3;
+    text-align: center;
+  }
+}
+.contactMainBlock{
+  width: 100%;
+  @include flexBox(center, center);
+}
+
+@media(max-width: 1100px){
+  .contactsWrapper{
+    width: 100%;
+  }
+}
+@media(max-width: 750px){
+  .contactMainBlock{
+    flex-wrap: wrap;
+  }
+}
+@media(max-width: 480px){
+  .contactsWrapper{
+    h1{
+      font-size: 25px;
+      margin: $size * 2 auto;
+      padding: 0;
+    }
+  }
+}

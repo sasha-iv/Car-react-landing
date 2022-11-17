@@ -1,0 +1,271 @@
+@import '../../../../mixins';
+@import '../../../../App';
+
+
+h3{
+  font-size: 27px;
+}
+
+.bookingWrapper{
+  width: 80%;
+  min-width: 650px;
+  margin: $size * 5 auto;
+  h1{
+    font-size: 50px;
+    margin: 30px $size;
+    padding: 30px 0px;
+  }
+  h1, h3, h4{
+    font-family: "Oswald", sans-serif;
+    color: $colorDarkBlue;
+  }
+}
+.booking-car-info{
+  width: 100%;
+  min-width: 250px;
+  margin: $size;
+  @include flexBox(space-between, flex-start);
+
+  img:first-child{
+    min-width: 250px;
+    width: 45%;
+    margin-right: $size * 2;
+  }
+}
+.booking-car-details{
+  width: 55%;
+  min-width: 250px;
+  padding: 0px $size * 2;
+  min-height: 200px;
+  @include flexBox(flex-start, flex-start);
+  flex-direction: column;
+
+  div{
+    margin: $size  0px;
+  }
+  span{
+    color: $colorDarkBlue;
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+    margin: $size / 2;
+  }
+  p{
+    color: $colorGrey;
+    font-size: 15px;
+    line-height: 17px;
+    text-align: justify;
+  }
+}
+.iconStars{
+  @include flexBox(center, center);
+}
+
+.techContainer{
+  width: 100%;
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+  margin: $size;
+}
+.techDetails{
+  width: 25%;
+  min-width: 100px;
+  min-height: 50px;
+  @include flexBox(flex-start, center);
+
+  img{
+    width: 30px;
+    height: 30px;
+    margin-right: $size;
+  }
+}
+
+.userData{
+  width: 100%;
+  @include flexBox(space-between, flex-start);
+}
+.forms{
+  width: 70%;
+  @include flexBox(center, flex-start);
+  flex-direction: column;
+}
+.bookingDetail{
+  width: 100%;
+  min-height: 200px;
+  margin: $size 0px;
+  h3{
+    margin: $size;
+  }
+  form{
+    input{
+      width: calc(50% - $size * 2);
+      height: 50px;
+      margin: $size;
+      padding: $size;
+      border: 1px solid #a2a2a2;
+      outline: none;
+    }
+    label{
+      color: $colorGrey;
+    }
+  }
+}
+.people{
+  margin: $size;
+  width: 150px;
+  @include flexBox(flex-start, center);
+  label{
+    width: 50px;
+  }
+  select{
+    margin: 0px $size;
+  }
+}
+
+.payment{
+  width: calc(30% - $size * 2);
+  @include flexBox(space-between, flex-start);
+  flex-direction: column;
+  margin: $size * 7 0 0 0;
+  padding: $size * 3 $size * 5;
+  min-width: 250px;
+  min-height: 275px;
+  border-radius: 10px;
+  background-color: $colorBlue;
+  h3{
+    color: $colorOrange;
+  }
+  button{
+    width: 150px;
+    height: 45px;
+  }
+  .carBookedMessage{
+    width: 100%;
+    min-height: 200px;
+    @include flexBox(center, center);
+    flex-direction: column;
+
+    h4{
+      color: $colorGrey;
+      font-size: 25px;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+}
+.howToPay{
+  .inputContainer{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: $colorGrey;
+    font-size: 17px;
+
+    input{
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .mark{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: #eee;
+      border-radius: 50%;
+      &:hover{
+        background-color: #ccc;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        display: none;
+        top: 6px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+
+    input:checked ~ .mark{
+      background-color: $colorOrange;
+    }
+    input:checked ~ .mark:after{
+      display: block;
+    }
+  }
+}
+
+
+
+@media(max-width: 850px){             //850
+  .bookingWrapper{
+    min-width: 280px;
+    width: 80%;
+    h1{
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  .booking-car-info{
+    @include flexBox(center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+
+    img:first-child{
+      width: 100%;
+      margin-right: 0px;
+    }
+  }
+  .booking-car-details{
+    width: 100%;
+    padding: $size;
+  }
+  .techDetails{
+    width: 50%;
+  }
+  .userData{
+    @include flexBox(center, center);
+    flex-wrap: wrap;
+    .forms{
+      width: 100%;
+    }
+  }
+  .payment{
+    margin: 0px;
+    width: 270px;
+  }
+}
+
+@media(max-width: 480px){          //480
+  .bookingWrapper{
+    width: 90%;
+    h1{
+      font-size: 20px;
+      margin: 0px;
+    }
+  }
+  .booking-car-details{
+    h3, span{
+      font-size: 18px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .techDetails{
+    span{
+      font-size: 13px;
+    }
+  }
+}

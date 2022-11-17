@@ -1,0 +1,47 @@
+@import '../../../mixins';
+@import "../../../App";
+
+.carsWrapper{
+  width: 70%;
+  margin: 0 auto;
+
+}
+.carsMainBlock{
+  width: 100%;
+  @include flexBox(center, center);
+  flex-direction: column;
+  margin-bottom: $size * 3;
+
+  h1{
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+    color: $colorDarkBlue;
+    padding: $size * 5 0px;
+  }
+}
+.carsContainer{
+  width: 100%;
+  min-width: 1100px;
+  @include flexBox(space-between, center);
+  flex-wrap: wrap;
+}
+
+@media(max-width: 1200px){
+  .carsWrapper{
+    width: 100%;
+  }
+  .carsContainer{
+    min-width: 100px;
+  }
+}
+@media (max-width: 850px) {
+  .carsMainBlock{
+    h1{
+      font-size: 30px;
+    }
+  }
+  .carsContainer{
+    @include flexBox(center, center);
+  }
+}

@@ -1,0 +1,91 @@
+@import '../../../../mixins';
+@import "../../../../App";
+
+.ourServiceWrapper{
+  min-height: 800px;
+  @include flexBox(center, center);
+  flex-direction: column;
+
+  h2{
+    color: $colorDarkBlue;
+    font-size: $size * 5;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+  }
+}
+.serviceContainer{
+  width: 100%;
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+  padding: $size * 2;
+}
+.serviceBlock{
+  width: 25%;
+  min-width: 300px;
+  min-height: 300px;
+  margin: $size;
+  background-color: $colorLightGrey;
+  transition: .5s;
+  &:hover{
+    background-color: $colorBlue;
+    h3{
+      color: $colorWhite;
+    }
+    span{
+      color: $colorDarkBlue;
+    }
+  }
+}
+.serviceBlockTop{
+  margin-top: $size * 2;
+  @include flexBox(space-between, center);
+
+  span{
+    font-size: 80px;
+    margin-right: $size;
+    font-weight: 600;
+    color: $colorGrey;
+    font-family: "Oswald", sans-serif;
+  }
+}
+
+.serviceBlockBottom{
+  padding: $size * 2;
+  h3{
+    color: $colorBlue;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+  }
+  p{
+    color: $colorGrey;
+    margin-top: $size;
+    font-size: 15px;
+    text-align: justify;
+  }
+}
+
+
+@media(max-width: 1600px){
+  .serviceBlock{
+    min-height: 340px;
+  }
+}
+
+@media(max-width: 850px){
+  .serviceBlock{
+    width: 45%;
+  }
+  .serviceBlockTop{
+    span{
+      font-size: 60px;
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .serviceBlock{
+    width: 100%;
+    min-width: 250px;
+  }
+}

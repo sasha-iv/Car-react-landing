@@ -1,0 +1,232 @@
+@import '../../mixins';
+@import "../../App";
+
+.footerBlock{
+  background-color: $colorBlue;
+  min-height: 550px;
+  @include flexBox(space-around, flex-start);
+  padding-top: $size * 4;
+}
+.footerCard{
+  max-width: 600px;
+  margin: $size;
+  min-width: 250px;
+  padding: $size;
+  @include flexBox(flex-start, flex-start);
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  h4, h5{
+    color: $colorWhite;
+    font-family: "Oswald",sans-serif;
+    margin-bottom: $size + 5px;
+  }
+  h4{
+    font-size: $size + 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h5{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: $size + 15px;
+  }
+}
+
+.backgroundNetwork{
+  width: 60px;
+  height: 60px;
+  margin: $size / 2;
+  background-color: $colorDarkBlue;
+  @include flexBox(center, center);
+  &:hover{
+    transform: translateY(-10px);
+    transition: 1s;
+    scale: 1.1;
+  }
+}
+
+.usefulLinks{
+  .footerLinks{
+    @include flexBox(space-around, flex-start);
+    flex-direction: column;
+  }
+  a{
+    color: $colorGrey;
+    margin: $size / 2;
+    position: relative;
+    padding: 3px 25px;
+    text-decoration: none;
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: -5px;
+      background-image: url("../../images/icons/arrow.png");
+      background-position: center;
+      background-size: contain;
+      width: 25px;
+      height: 25px;
+      rotate: 90deg;
+    }
+    &:hover{
+      transform: translateX(10px);
+      transition: .5s;
+    }
+  }
+}
+
+.footerImages{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $size;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news{
+  min-width: 300px;
+}
+.newsLetterContent{
+  width: 90%;
+  min-height: 200px;
+  padding: $size 0px;
+  @include flexBox(space-around, flex-start);
+  flex-direction: column;
+
+  p{
+    color: $colorGrey;
+  }
+  form{
+    width: 100%;
+    @include flexBox(flex-start, center);
+
+    input{
+      width: 75%;
+      height: 45px;
+      background-color: $colorDarkBlue;
+      border: none;
+      outline: none;
+      color: $colorGrey;
+      padding-left: $size;
+      font-size: $size + 5px;
+      min-width: 160px;
+    }
+    button{
+      width: 20%;
+      margin-left: $size / 2;
+      height: 45px;
+      text-transform: uppercase;
+      min-width: 80px;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: $colorGrey;
+  }
+}
+
+.bottomBlock{
+  background-color: $colorDarkBlue;
+  height: 100px;
+  @include flexBox(center, center);
+  flex-direction: column;
+  color: $colorGrey;
+  position: relative;
+
+  div{
+    margin: $size / 2;
+
+    span{
+      color: $colorOrange;
+    }
+  }
+}
+
+.footerContacts{
+  flex-direction: column;
+
+  a:nth-child(2):before {
+    background-image: url("../../images/icons/icons8-location-50.png");
+  }
+
+}
+
+#scrollUp{
+  width: 45px;
+  height: 40px;
+  background-image: url("../../images/icons/arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-color: $colorOrange;
+  position: absolute;
+  border-radius: $size / 2;
+  top: 30px;
+  right: 40px;
+
+  &:hover{
+    scale: 1.1;
+    cursor: pointer;
+  }
+}
+
+
+
+@media (max-width: 1300px){            //1300
+  .footerCard{
+    width: calc(50% - 20px);
+  }
+  .footerBlock{
+    flex-wrap: wrap;
+  }
+  .news{
+    min-width: 250px;
+  }
+}
+@media(max-width: 850px){              //850
+  .bottomBlock{
+    div, span{
+      font-size: $size;
+    }
+  }
+  #scrollUp{
+    width: 30px;
+    height: 30px;
+    top: 35px;
+    right: 25px;
+  }
+}
+
+@media(max-width: 650px){       //650
+  .footerCard{
+    width: 100%;
+    h4{
+      font-size: $size * 2;
+    }
+    h5{
+      font-size: $size + 5px;
+    }
+    .backgroundNetwork{
+      width: 35px;
+      height: 35px;
+      img{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){                //480
+  .bottomBlock{
+    padding: $size;
+    @include flexBox(center, flex-start);
+  }
+}

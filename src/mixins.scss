@@ -1,0 +1,8 @@
+@mixin flexBox($positionJ, $positionA){
+  display: flex;
+  align-items: $positionA;
+  justify-content: $positionJ;
+}
+
+
+

@@ -1,0 +1,100 @@
+@import "../../../../../mixins";
+@import "../../../../../App";
+
+.aboutBottomPart{
+  width: 100%;
+  min-height: 500px;
+  margin: $size * 5 0px;
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+
+}
+.aboutBottomBlock{
+  width: 50%;
+  min-width: 600px;
+  min-height: 350px;
+  @include flexBox(space-around, center);
+
+}
+.leftPart{
+  background-color: $colorBlue;
+
+  .aboutBottomContent{
+    @include flexBox(space-around, flex-end);
+    flex-direction: column;
+    h3, span{
+      text-align: right;
+    }
+  }
+}
+.rightPart{
+  background-color: $colorDarkBlue;
+
+  .aboutBottomContent{
+    @include flexBox(space-around, flex-start);
+    flex-direction: column;
+  }
+}
+.aboutImgBlock{
+  width: 50%;
+  min-width: 300px;
+  padding: $size;
+
+  img{
+    width: 80%;
+    min-width: 300px;
+    transition: .5s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+.aboutBottomContent{
+  width: 45%;
+  min-width: 300px;
+  min-height: 250px;
+  padding: $size * 3;
+  margin: $size;
+
+  h3{
+    color: $colorWhite;
+    font-size: 25px;
+    font-family: "Oswald", sans-serif;
+  }
+  span{
+    color: $colorGrey;
+    line-height: 25px;
+    margin: $size 0px;
+  }
+  a{
+    @include flexBox(center, center);
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+
+@media(max-width: 1800px){
+  .aboutBottomBlock{
+    width: 100%;
+  }
+}
+@media (max-width: 850px) {
+  .aboutBottomBlock{
+    min-width: 250px;
+  }
+  .aboutBottomContent, .aboutImgBlock, .aboutImgBlock img{
+    min-width: 130px;
+  }
+  .aboutBottomContent{
+    padding: $size;
+    h3{
+      font-size: 20px;
+    }
+    span{
+      font-size: 13px;
+    }
+  }
+}

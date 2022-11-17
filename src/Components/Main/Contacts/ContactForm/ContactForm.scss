@@ -1,0 +1,77 @@
+@import '../../../../mixins';
+@import "../../../../App";
+
+.contactFormContainer{
+  background-color: $colorLightGrey;
+  width: 50%;
+  min-width: 350px;
+  margin: $size;
+}
+.contactForm{
+  @include flexBox(center, center);
+  flex-direction: column;
+  padding: $size * 2;
+  div{
+    width: 100%;
+    @include flexBox(space-between, center);
+    input{
+      width: 48%;
+    }
+  }
+  input, textarea{
+    border: 2px solid lightgray;
+    width: 100%;
+    min-width: 150px;
+    padding: $size;
+    margin: $size 0;
+    font-size: 15px;
+    font-family: "Rubik", sans-serif;
+    outline: none;
+    &:focus{
+      border: 2px double orange;
+    }
+  }
+  input{
+    height: 50px;
+  }
+  textarea{
+    height: 150px;
+  }
+  button{
+    width: 140px;
+    height: 40px;
+    margin-top: $size;
+  }
+}
+
+
+@media(max-width: 750px){
+  .contactFormContainer{
+    width: 70%;
+    .contactForm{
+      div{
+        flex-wrap: wrap;
+        input{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 480px){
+  .contactFormContainer{
+    min-width: 250px;
+
+    input, textarea{
+      min-width: 100px;
+      font-size: 13px;
+      margin: $size / 2 0;
+    }
+    input{
+      height: 40px;
+    }
+    textarea{
+      height: 80px;
+    }
+  }
+}

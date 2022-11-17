@@ -1,0 +1,104 @@
+@import '../../../../mixins';
+@import '../../../../App';
+
+.slick-prev, .slick-next{
+  background-color: $colorOrange;
+  width: 40px;
+  height: 40px;
+  &:before{
+    font-family: "Rubik", sans-serif;
+  }
+  &:hover, &:focus{
+    background-color: $colorOrange;
+  }
+}
+.slick-prev{
+  left: -50px;
+}
+.slick-next {
+  right: -50px;
+}
+.slick-dots li button:before{
+  color: $colorOrange;
+  font-size: 12px;
+  opacity: 1;
+  top: 10px;
+}
+
+.pagesBlock{
+  h1{
+    font-family: "Oswald", sans-serif;
+    color: $colorDarkBlue;
+    text-align: center;
+    margin: $size * 5 0px;
+  }
+
+}
+
+.pageCard{
+  background-color: $colorLightGrey;
+  flex-direction: column;
+  margin: $size / 2;
+
+  h4{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    margin: $size 0px;
+  }
+  span, p{
+    font-size: 15px;
+    color: $colorGrey;
+    font-family: "Rubik", sans-serif;
+  }
+}
+.staff{
+  min-height: 350px;
+  @include flexBox(center, center);
+  &:hover{
+    background-color: $colorDarkBlue;
+    h4{
+      color: white;
+    }
+  }
+  img{
+    width: auto;
+    height: 170px;
+  }
+  h4{
+    color: $colorDarkBlue;
+  }
+}
+
+
+@media(max-width: 850px){
+  .pagesBlock{
+    h1{
+      font-size: 25px;
+    }
+  }
+  .pageCard{
+    h4{
+      font-size: 17px;
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .pagesBlock{
+    h1{
+      font-size: 20px;
+    }
+  }
+  .pageCard{
+    p{
+      font-size: 13px;
+    }
+  }
+  .staff{
+    min-height: 300px;
+    img{
+      width: auto;
+      height: 140px;
+    }
+  }
+}

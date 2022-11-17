@@ -1,0 +1,50 @@
+@import '../../../../mixins';
+@import "../../../../App";
+
+.contactsDataContainer{
+  width: 30%;
+  min-width: 350px;
+  background-color: $colorBlue;
+  padding: $size * 3;
+  min-height: 400px;
+
+  div{
+    width: 100%;
+    padding: $size;
+    margin: $size 0;
+    h4{
+      color: white;
+      font-family: "Oswald", sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    span{
+      display: block;
+      color: $colorGrey;
+      margin-top: 3px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: 750px){
+  .contactsDataContainer{
+    width: 70%;
+    margin-top: $size * 2;
+  }
+}
+@media(max-width: 480px){
+  .contactsDataContainer{
+    min-width: 250px;
+    padding: $size * 2;
+    min-height: 350px;
+    div{
+      h4{
+        font-size: 17px;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+  }
+}

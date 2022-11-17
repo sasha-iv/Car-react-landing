@@ -1,0 +1,12 @@
+@import '../../../mixins';
+@import '../../../App';
+
+.pagesWrapper{
+  width: 70%;
+  margin: $size * 4 auto;
+}
+@media(max-width: 480px){
+  .pagesWrapper{
+    width: 90%;
+  }
+}

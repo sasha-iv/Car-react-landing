@@ -1,0 +1,119 @@
+@import "../../../../mixins";
+@import "../../../../App";
+
+.discountWrapper{
+  min-height: 700px;
+  background-image: linear-gradient(rgba(20, 21, 26, 0.8), rgba(19, 20, 28, 0.8)), url(../../../../images/car4.jpeg);
+  background-size: cover;
+  background-position: center;
+  @include flexBox(center, center);
+}
+.commonStyle{
+  width: 30%;
+  min-width: 400px;
+  min-height: 350px;
+  background-color: rgba(3, 3, 3, 0.5);
+  @include flexBox(space-around, center);
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  border-radius: $size * 2;
+  padding: $size * 2;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+
+  h2{
+    color: $colorWhite;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+
+}
+.discount{
+  h1{
+    color: $colorOrange;
+    font-size: $size * 5;
+  }
+
+  span{
+    color: $colorGrey;
+    font-family: "Rubik", sans-serif;
+  }
+  button{
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+  }
+}
+.form{
+  position: relative;
+
+  .closeForm{
+    width: 20px;
+    height: 20px;
+    color: $colorWhite;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  form{
+    @include flexBox(space-around, center);
+    flex-direction: column;
+    width: 100%;
+    min-height: 300px;
+
+    input{
+      width: 70%;
+      height: 50px;
+      padding: $size / 2 $size * 2;
+      background-color: $colorDarkBlue;
+      border: none;
+      outline: none;
+      color: $colorWhite;
+      font-size: 17px;
+    }
+    button{
+      width: 100px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+
+
+
+@media(max-width: 850px){
+  .discountWrapper{
+    min-height: 400px;
+  }
+  .discount{
+    h1{
+      font-size: $size * 3;
+    }
+    h2{
+      font-size: $size * 2;
+    }
+    span{
+      font-size: 13px;
+    }
+  }
+  .form{
+    form{
+      input{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media(max-width: 480px){
+  .commonStyle{
+    width: calc(100% - 10px);
+    min-width: 100px;
+  }
+}

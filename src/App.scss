@@ -1,0 +1,36 @@
+@import "mixins";
+
+$colorOrange: #F77D0A;
+$colorBlue: #2B2E4A;
+$colorDarkBlue: #1C1E32;
+$colorGrey: #8486A0;
+$colorLightGrey: #e0e4ee;
+$colorWhite: white;
+$size: 10px;
+
+.btnStyle{                                  //btnStyle
+  background-color: $colorOrange;
+  color: $colorWhite;
+  border: none;
+  border-radius: 2px;
+
+  &:hover{
+    cursor: pointer;
+    background-color: #d06a0b;
+  }
+}
+
+.orangeBlock{
+  width: 80px;
+  height: 80px;
+  background-color: $colorOrange;
+  @include flexBox(center, center);
+  img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.app{
+  font-family: "Rubik",sans-serif;
+}

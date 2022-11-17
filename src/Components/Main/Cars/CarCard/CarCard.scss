@@ -1,0 +1,78 @@
+@import "../../../../mixins";
+@import "../../../../App";
+
+.carCard{
+  width: 30%;
+  min-height: 400px;
+  margin: $size * 3 0px;
+  background-color: $colorLightGrey;
+  padding: $size;
+  @include flexBox(space-around, center);
+  flex-direction: column;
+
+  img{
+    width: 90%;
+  }
+  h3{
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    color: $colorDarkBlue;
+  }
+  .car-details{
+    width: 200px;
+    @include flexBox(space-between, center);
+    color: $colorGrey;
+    margin: $size;
+    span{
+      text-transform: uppercase;
+      margin: 2px;
+    }
+  }
+  a{
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    width: 120px;
+    padding: $size  0;
+  }
+}
+.car-info{
+  width: 100%;
+  @include flexBox(center, center);
+  flex-direction: column;
+
+}
+
+
+@media(max-width: 1200px){
+  .carCard{
+    margin: $size * 2 0px;
+    min-height: 350px;
+  }
+}
+@media (max-width: 850px) {
+  .carCard{
+    width: 280px;
+    min-height: 300px;
+    margin: $size;
+  }
+}
+
+@media (max-width: 650px) {
+  .carCard{
+    width: 80%;
+    min-width: 250px;
+
+    img{
+      width: 70%;
+      min-width: 230px;
+    }
+    .car-details{
+      width: 150px;
+      span{
+        font-size: 13px;
+      }
+    }
+  }
+
+}

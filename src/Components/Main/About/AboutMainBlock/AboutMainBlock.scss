@@ -1,0 +1,150 @@
+@import '../../../../mixins';
+@import "../../../../App";
+
+.aboutMainBlockWrapper{
+  @include flexBox(center, center);
+}
+.aboutContent{
+  width: 70%;
+  @include flexBox(space-around, center);
+  flex-direction: column;
+  min-height: 1000px;
+  padding: $size * 2;
+
+  h2{
+    font-family: "Oswald", sans-serif;
+    color: $colorDarkBlue;
+    font-size: $size * 5;
+    text-align: center;
+    margin: $size * 5 0px;
+    span{
+      color: $colorOrange;
+    }
+  }
+  img{
+    width: 80%;
+  }
+
+  .moreInfo{
+    display: none;
+    width: 80px;
+    height: 35px;
+    margin: $size * 2 0px;
+    font-size: 15px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  .aboutInfo{
+    width: 100%;
+    color: $colorGrey;
+    line-height: 25px;
+    text-align: justify;
+    margin: $size * 2 0px;
+    text-indent: 40px;
+  }
+}
+.aboutCardContainer{
+  width: 100%;
+  margin-top: $size * 2;
+  @include flexBox(space-between, center);
+}
+.aboutCard{
+  width: 30%;
+  height: 150px;
+  min-width: 280px;
+  margin: $size 0px;
+  background-color: $colorLightGrey;
+  color: $colorDarkBlue;
+  @include flexBox(space-between, center);
+  transition: .5s;
+
+  &:hover{
+    background-color:  #2B2E4A;
+    color: $colorWhite;
+  }
+
+  h4{
+    font-family: "Oswald", sans-serif;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    margin: $size;
+  }
+}
+
+
+@media(max-width: 1300px){
+  .aboutCardContainer{
+    min-width: 100px;
+  }
+  .aboutContent{
+    width: 100%;
+  }
+  .aboutCard{
+    min-width: 200px;
+    height: 130px;
+    @include flexBox(center, center);
+
+    .orangeBlock{
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
+
+@media(max-width: 850px){
+  .aboutCardContainer{
+    flex-wrap: wrap;
+    @include flexBox(center, center);
+  }
+  .aboutCard{
+    width: 80%;
+  }
+  .aboutContent{
+    h2{
+      font-size: 30px;
+    }
+    .aboutInfo{
+      font-size: 15px;
+      padding: $size;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .aboutMainBlockWrapper{
+    @include flexBox(center, flex-start);
+  }
+  .aboutContent{
+    min-height: 500px;
+    padding: 0px;
+  }
+  .aboutCard {
+    width: 100%;
+    height: 90px;
+
+    .orangeBlock {
+      width: 60px;
+      height: 60px;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    h4 {
+      font-size: 13px;
+    }
+  }
+  .aboutContent{
+    .moreInfo{
+      display: block;
+    }
+    .aboutInfo{
+      display: none;
+    }
+    .aboutInfo.showInfo {
+      display: block;
+    }
+  }
+}
