@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Car-react-landing/static/css/main.075f0d7f.css",
-    "main.js": "/Car-react-landing/static/js/main.9412930f.js",
+    "main.css": "/Car-react-landing/static/css/main.8d41fc5f.css",
+    "main.js": "/Car-react-landing/static/js/main.c0690c67.js",
     "static/media/car4.jpeg": "/Car-react-landing/static/media/car4.bc02238284274d680d69.jpeg",
     "static/media/team-6.jpg": "/Car-react-landing/static/media/team-6.7c1cf31806ea74477d16.jpg",
     "static/media/team-5.jpg": "/Car-react-landing/static/media/team-5.98edd982e8cfd618e42f.jpg",
@@ -30,11 +30,11 @@
     "static/media/slick.ttf": "/Car-react-landing/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Car-react-landing/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Car-react-landing/index.html",
-    "main.075f0d7f.css.map": "/Car-react-landing/static/css/main.075f0d7f.css.map",
-    "main.9412930f.js.map": "/Car-react-landing/static/js/main.9412930f.js.map"
+    "main.8d41fc5f.css.map": "/Car-react-landing/static/css/main.8d41fc5f.css.map",
+    "main.c0690c67.js.map": "/Car-react-landing/static/js/main.c0690c67.js.map"
   },
   "entrypoints": [
-    "static/css/main.075f0d7f.css",
-    "static/js/main.9412930f.js"
+    "static/css/main.8d41fc5f.css",
+    "static/js/main.c0690c67.js"
   ]
 }
